@@ -89,8 +89,8 @@ elseif(CMAKE_CXX_COMPILER_ID MATCHES "Clang")  # MATCHES so we get both Clang an
       # AppleClang doesn't have lsan
       # https://developer.apple.com/documentation/code_diagnostics
       if(NOT CMAKE_CXX_COMPILER_VERSION VERSION_LESS 3.5)
-        set(ABSL_LSAN_LINKOPTS "-fsanitize=leak")
-        set(ABSL_HAVE_LSAN ON)
+        #set(ABSL_LSAN_LINKOPTS "-fsanitize=leak")
+        set(ABSL_HAVE_LSAN OFF)
       endif()
     endif()
   endif()

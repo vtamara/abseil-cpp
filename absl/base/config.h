@@ -797,11 +797,12 @@ static_assert(ABSL_INTERNAL_INLINE_NAMESPACE_STR[0] != 'h' ||
 // ABSL_HAVE_LEAK_SANITIZER
 //
 // LeakSanitizer (or lsan) is a detector of memory leaks.
-#ifdef ABSL_HAVE_LEAK_SANITIZER
-#error "ABSL_HAVE_LEAK_SANITIZER cannot be directly set."
-#elif ABSL_HAVE_FEATURE(leak_sanitizer)
-#define ABSL_HAVE_LEAK_SANITIZER 1
-#endif
+//#ifdef ABSL_HAVE_LEAK_SANITIZER
+//#error "ABSL_HAVE_LEAK_SANITIZER cannot be directly set."
+//#elif ABSL_HAVE_FEATURE(leak_sanitizer)
+//#define ABSL_HAVE_LEAK_SANITIZER 1
+//#endif
+#define ABSL_HAVE_LEAK_SANITIZER 0
 
 // ABSL_HAVE_CLASS_TEMPLATE_ARGUMENT_DEDUCTION
 //
